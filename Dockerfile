@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY ./src /app
 COPY ./templates /app/templates
+
 # Copy the requirements.txt file into the container
 COPY ./requirements.txt /app/requirements.txt
 
@@ -21,9 +22,16 @@ RUN apt-get update && \
 
 # Install the Python dependencies from requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Install Gunicorn
+RUN pip install gunicorn
+
+# Run the database initialization script
 RUN python /app/task_manager_db.py
+
 # Expose port 5000 to the outside world
 EXPOSE 5000
 
-# Run the application when the container starts
-CMD ["python", "task_manager_main.py"]
+# Run the application using Gunicorn on port 5000
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "task_manager_main:app"]
+
