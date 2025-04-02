@@ -51,9 +51,9 @@ docker run -p 5000:5000 my-flask-app
 ```bash
 curl localhost:5000
        or
-curl <pub-ip>:5000
+curl <pub-ip-instance>:5000
 ```
-Or open http://<pub-ip>:5000/ in your browser
+Or open http://<pub-ip-instance>:5000/ in your browser
 
 ![image](https://github.com/user-attachments/assets/4380cec7-ff63-4e66-adc1-b71c74afaf46)
 
