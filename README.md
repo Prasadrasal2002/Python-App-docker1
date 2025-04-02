@@ -8,7 +8,7 @@
 **Clone this repository:**
 
 ```bash
-git clone
+git clone https://github.com/Prasadrasal2002/Python-App-docker1.git
 cd Python-App-docker1
 ```
 
