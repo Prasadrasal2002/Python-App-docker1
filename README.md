@@ -8,13 +8,17 @@
 **Clone this repository:**
 
 ```bash
-git clone https://github.com/DevOpsInstituteMumbai-wq/Menu-Based-Health-Check-System.git
-cd Menu-Based-Health-Check-System
+git clone
+cd Python-App-docker1
 ```
 
 **Install docker**
 
-See: how-to-install-docker
+```bash
+curl -fsSL https://get.docker.com | sudo sh
+
+docker --version
+```
 
 **Build the docker image**
 
